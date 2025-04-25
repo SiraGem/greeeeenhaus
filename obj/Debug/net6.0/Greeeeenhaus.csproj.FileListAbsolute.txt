@@ -127,3 +127,4 @@ C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environm
 C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Shells.xnb
 C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Shirt.xnb
 C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Wood.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.sourcelink.json
