@@ -1,0 +1,129 @@
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderSea.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\Player\happy.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\Player\miku.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\UI\dialogueBox.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderBox.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderBranch.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderShirt.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.exe
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.deps.json
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.runtimeconfig.json
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.pdb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.csproj.AssemblyReference.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.GeneratedMSBuildEditorConfig.editorconfig
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.AssemblyInfoInputs.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.AssemblyInfo.cs
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.csproj.CoreCompileInputs.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeen.E513194F.Up2Date
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\refint\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.pdb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.genruntimeconfig.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\OnaGreeeeenahus!!\obj\Debug\net6.0\ref\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderBox.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderBranch.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderSea.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\Environment\placeholderShirt.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\Player\happy.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\Player\miku.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Content\UI\dialogueBox.xnb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.exe
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.deps.json
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.runtimeconfig.json
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\Greeeeenhaus.pdb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.csproj.AssemblyReference.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.GeneratedMSBuildEditorConfig.editorconfig
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.AssemblyInfoInputs.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.AssemblyInfo.cs
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.csproj.CoreCompileInputs.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeen.E513194F.Up2Date
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\refint\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.pdb
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\Greeeeenhaus.genruntimeconfig.cache
+C:\GEMMA\GameDev\Ona Greeeeenhaus!!\Greeeeenahus!!\obj\Debug\net6.0\ref\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Player\happy.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Player\miku.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\dialogueBox.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\placeholderBeach.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\placeholderBox.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\placeholderBranch.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\placeholderSea.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\placeholderShirt.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Player\placeholderHappy.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Player\placeholderPlayer.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\placeholderDialogueBox.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Greeeeenhaus.exe
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Greeeeenhaus.deps.json
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Greeeeenhaus.runtimeconfig.json
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Greeeeenhaus.pdb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.csproj.AssemblyReference.cache
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.GeneratedMSBuildEditorConfig.editorconfig
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.AssemblyInfoInputs.cache
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.AssemblyInfo.cs
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.csproj.CoreCompileInputs.cache
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeen.E513194F.Up2Date
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\refint\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.pdb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\Greeeeenhaus.genruntimeconfig.cache
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\obj\Debug\net6.0\ref\Greeeeenhaus.dll
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\buildingScreenExample.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\placeholderInventory.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\placeholderDiscard.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\placeholderReturn.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Cabin\placeholder_backWall_branch.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Cabin\placeholder_backWall_metal.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Cabin\placeholder_backWall_wood.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Cabin\placeholder_floor_metal.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Cabin\placeholder_floor_wood.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Beach_Sign.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\ClearOverlay_1.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\ClearOverlay_2.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Foam.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Inventory_Box.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Sand.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Sparkles_1.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Sparkles_2.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Water.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Waves_1.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Sea\Waves_2.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\Watercolor_overlay.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\UI\WhiteEdge_overlay.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Branch.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Metal.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\ObjectFoam.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Plastic.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Shells.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Shirt.xnb
+C:\GEMMA\GameDev\Greeeeenhaus!!\Greeeeenhaus!!\bin\Debug\net6.0\Content\Environment\Objects\Wood.xnb
