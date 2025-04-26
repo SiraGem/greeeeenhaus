@@ -94,7 +94,7 @@ namespace Greeeeenhaus
             _watercolorOverlay = Content.Load<Texture2D>("UI/Watercolor_overlay");
             _playerFace = Content.Load<Texture2D>("Player/placeholderHappy");
             _dialogueBox = Content.Load<Texture2D>("UI/DialogueBox");
-            _inventoryMenu = Content.Load<Texture2D>("UI/placeholderInventory");
+            _inventoryMenu = Content.Load<Texture2D>("UI/InventoryMenu");
             _returnButton = Content.Load<Texture2D>("UI/placeholderReturn");
             _returnButtonArea = new Rectangle(590, 45, _returnButton.Width, _returnButton.Height);
             _discardButton = Content.Load<Texture2D>("UI/placeholderDiscard");
@@ -274,7 +274,7 @@ namespace Greeeeenhaus
             if (_currentState == GameState.Building)
             {
                 _spriteBatch.Draw(_beachBG, Vector2.Zero, Color.White);
-                _spriteBatch.Draw(_inventoryMenu, new Vector2(590, 192), Color.White);
+                _spriteBatch.Draw(_inventoryMenu, new Vector2(550, 178), Color.White);
                 _spriteBatch.Draw(_returnButton, new Vector2(590, 45), Color.White);
                 _spriteBatch.Draw(_discardButton, new Vector2(690, 45), Color.White);
                 //TESTING AREAS
@@ -351,9 +351,9 @@ namespace Greeeeenhaus
         {
             _inventorySlots.Clear();
 
-            Vector2 startPosition = new Vector2(600, 209);
-            int spacingX = 90; 
-            int spacingY = 78; 
+            Vector2 startPosition = new Vector2(573, 199);
+            int spacingX = 80; 
+            int spacingY = 74; 
 
             for (int i = 0; i < MAX_ITEMS_STORAGE; i++)
             {

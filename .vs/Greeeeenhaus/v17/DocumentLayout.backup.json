@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\floatingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:floatingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\seaanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:seaanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,14 +44,14 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP8AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAEwGEBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T15:29:32.504Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SeaAnimation.cs",
               "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\SeaAnimation.cs",
               "RelativeDocumentMoniker": "SeaAnimation.cs",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BuildingPart.cs",
               "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\BuildingPart.cs",
               "RelativeDocumentMoniker": "BuildingPart.cs",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FloatingObject.cs",
               "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\FloatingObject.cs",
               "RelativeDocumentMoniker": "FloatingObject.cs",
@@ -87,15 +87,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCQAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T17:04:28.017Z"
+              "WhenOpened": "2025-04-17T17:04:28.017Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

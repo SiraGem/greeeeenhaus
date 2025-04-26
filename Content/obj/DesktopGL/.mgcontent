@@ -36,6 +36,7 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/placeholderHappy.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/placeholderPlayer.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/DialogueBox.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/InventoryMenu.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderDialogueBox.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderDiscard.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderInventory.png</File>
@@ -44,6 +45,7 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/WhiteEdge_overlay.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

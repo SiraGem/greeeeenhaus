@@ -13,11 +13,25 @@ namespace Greeeeenhaus
         public float Speed = 300f;
         public bool HasItem;
         public FloatingObject CurrentObject;
+        public State CurrentState;
+        public State LookingAt;
+        public enum State
+        {
+            IdleLeft,
+            IdleRight,
+            IdleDown,
+            IdleUp,
+            MovingLeft,
+            MovingRight,
+            MovingDown,
+            MovingUp
+        }
 
         public void Load(Texture2D texture)
         {
             this.Texture = texture;
             this.Position = new Vector2(200, 200); //starting position
+            CurrentState = State.IdleDown;
         }
 
         public void Update(GameTime gameTime, Rectangle playableSeaArea)
@@ -26,10 +40,30 @@ namespace Greeeeenhaus
             KeyboardState kb = Keyboard.GetState();
             Vector2 newPosition;
 
-            if (kb.IsKeyDown(Keys.W) || kb.IsKeyDown(Keys.Up)) movement.Y -= 1;
-            if (kb.IsKeyDown(Keys.S) || kb.IsKeyDown(Keys.Down)) movement.Y += 1;
-            if (kb.IsKeyDown(Keys.A) || kb.IsKeyDown(Keys.Left)) movement.X -= 1;
-            if (kb.IsKeyDown(Keys.D) || kb.IsKeyDown(Keys.Right)) movement.X += 1;
+            if (kb.IsKeyDown(Keys.W) || kb.IsKeyDown(Keys.Up)) {
+                movement.Y -= 1; 
+                CurrentState = State.MovingUp;
+                LookingAt = State.IdleUp;
+            }
+
+            if (kb.IsKeyDown(Keys.S) || kb.IsKeyDown(Keys.Down))
+            {
+                movement.Y += 1;
+                CurrentState = State.MovingDown;
+                LookingAt = State.IdleDown;
+            }
+            if (kb.IsKeyDown(Keys.A) || kb.IsKeyDown(Keys.Left))
+            {
+                movement.X -= 1;
+                CurrentState = State.MovingLeft;
+                LookingAt = State.IdleLeft;
+            }
+            if (kb.IsKeyDown(Keys.D) || kb.IsKeyDown(Keys.Right))
+            {
+                movement.X += 1;
+                CurrentState = State.MovingRight;
+                LookingAt = State.IdleRight;
+            }
 
             if (movement != Vector2.Zero) movement.Normalize();
 
