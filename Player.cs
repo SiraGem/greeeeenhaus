@@ -10,7 +10,7 @@ namespace Greeeeenhaus
     {
         public Vector2 Position;
         public Texture2D Texture;
-        public float Speed = 300f;
+        public float Speed = 700f;
         public bool HasItem;
         public FloatingObject CurrentObject;
         public State CurrentState;

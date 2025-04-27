@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Greeeeenhaus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5ecbd7b4a03536c153358c5d3bf991dcde2c12e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41384b891fa8959796dfbe856b8b3b40ca5c0120")]
 [assembly: System.Reflection.AssemblyProductAttribute("Greeeeenhaus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Greeeeenhaus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

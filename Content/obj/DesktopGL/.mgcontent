@@ -5,11 +5,32 @@
   <Config />
   <SourceFiles>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/buildingScreenExample.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/placeholder_backWall_branch.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/placeholder_backWall_metal.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/placeholder_backWall_wood.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/placeholder_floor_metal.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/placeholder_floor_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/1_floor/floor_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/1_floor/floor_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/2_backWall/backWall_branch.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/2_backWall/backWall_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/2_backWall/backWall_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/3_rightWall/rightWall_branch.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/3_rightWall/rightWall_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/3_rightWall/rightWall_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/4_leftWall/leftWall_branch.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/4_leftWall/leftWall_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/4_leftWall/leftWall_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/5_frontWall/frontWall_branch.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/5_frontWall/frontWall_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/5_frontWall/frontWall_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/6_rightRoof/rightRoof_branch.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/6_rightRoof/rightRoof_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/6_rightRoof/rightRoof_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/6_rightRoof/rightRoof_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/7_leftRoof/leftRoof_branch.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/7_leftRoof/leftRoof_metal.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/7_leftRoof/leftRoof_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/7_leftRoof/leftRoof_wood.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/door_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/leftwindow_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/rightwindow_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/BuildingBG.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Branch.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Metal.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/ObjectFoam.png</File>
@@ -17,11 +38,6 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Shells.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Shirt.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Wood.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/placeholderBeach.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/placeholderBox.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/placeholderBranch.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/placeholderSea.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/placeholderShirt.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Sea/Beach_Sign.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Sea/ClearOverlay_1.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Sea/ClearOverlay_2.png</File>
@@ -37,14 +53,26 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/placeholderPlayer.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/DialogueBox.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/InventoryMenu.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderDialogueBox.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderDiscard.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderInventory.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderReturn.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/Watercolor_overlay.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/WhiteEdge_overlay.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

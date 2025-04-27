@@ -14,7 +14,7 @@ namespace Greeeeenhaus
         //STATES
         private GameState _currentState = GameState.Sea;
         //BASICS
-        private Texture2D _beachBG;
+        private Texture2D _buildingBG;
         private Texture2D _playerTexture;
         private SeaAnimation _seaAnimation;
         //PLAYER
@@ -79,10 +79,10 @@ namespace Greeeeenhaus
 
             // TODO: use this.Content to load your game content here
             //Base things load
-            _beachBG = Content.Load<Texture2D>("Environment/placeholderBeach");
+            _buildingBG = Content.Load<Texture2D>("Environment/Cabin/BuildingBG");
             _playerTexture = Content.Load<Texture2D>("Player/placeholderPlayer");
             _gameArea = new Rectangle(0, 0, GraphicsDevice.PresentationParameters.Bounds.Width, GraphicsDevice.PresentationParameters.Bounds.Height);
-            _playableSeaArea = new Rectangle(90, 0, GraphicsDevice.PresentationParameters.Bounds.Width, GraphicsDevice.PresentationParameters.Bounds.Height);
+            _playableSeaArea = new Rectangle(90, 3, GraphicsDevice.PresentationParameters.Bounds.Width - 20, GraphicsDevice.PresentationParameters.Bounds.Height - 20);
             _seaAnimation = new SeaAnimation();
             _seaAnimation.Load();
             GenerateSeaParts();
@@ -273,7 +273,7 @@ namespace Greeeeenhaus
             }
             if (_currentState == GameState.Building)
             {
-                _spriteBatch.Draw(_beachBG, Vector2.Zero, Color.White);
+                _spriteBatch.Draw(_buildingBG, Vector2.Zero, Color.White);
                 _spriteBatch.Draw(_inventoryMenu, new Vector2(550, 178), Color.White);
                 _spriteBatch.Draw(_returnButton, new Vector2(590, 45), Color.White);
                 _spriteBatch.Draw(_discardButton, new Vector2(690, 45), Color.White);
@@ -380,18 +380,83 @@ namespace Greeeeenhaus
         public void InitializeBuildingParts()
         {
             //1. floor
-            BuildingPart floor = new BuildingPart("floor", _cabinArea, new Vector2(145, 320), 2);
+            BuildingPart floor = new BuildingPart("floor", _cabinArea, new Vector2(91, 299), 3);
             floor.SetAcceptedObjects(new string[]{ "wood", "metal"});
-            floor.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/placeholder_floor_wood"));
-            floor.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/placeholder_floor_metal"));
+            floor.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/1_floor/floor_wood"));
+            floor.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/1_floor/floor_metal"));
             _buildingParts.Add(floor);
             //2. backWall
-            BuildingPart backWall = new BuildingPart("backWall", _cabinArea, new Vector2(155, 152), 0);
+            BuildingPart backWall = new BuildingPart("backWall", _cabinArea, new Vector2(90, 150), 1);
             backWall.SetAcceptedObjects(new string[] { "wood", "metal", "branch" });
-            backWall.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/placeholder_backWall_wood"));
-            backWall.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/placeholder_backWall_metal"));
-            backWall.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/placeholder_backWall_branch"));
+            backWall.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/2_backWall/backWall_wood"));
+            backWall.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/2_backWall/backWall_metal"));
+            backWall.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/2_backWall/backWall_branch"));
+            backWall.AddMaterialOffsetDictionary("branch", new Vector2(-26, -40));
             _buildingParts.Add(backWall);
+            //3.rightWall
+            BuildingPart rightWall = new BuildingPart("rightWall", _cabinArea, new Vector2(285, 149), 2);
+            rightWall.SetAcceptedObjects(new string[] { "wood", "metal", "branch" });
+            rightWall.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/3_rightWall/rightWall_wood"));
+            rightWall.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/3_rightWall/rightWall_metal"));
+            rightWall.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/3_rightWall/rightWall_branch"));
+            rightWall.AddMaterialOffsetDictionary("branch", new Vector2(0, -24));
+            _buildingParts.Add(rightWall);
+            //4. leftWall
+            BuildingPart leftWall = new BuildingPart("leftWall", _cabinArea, new Vector2(89, 180), 4);
+            leftWall.SetAcceptedObjects(new string[] { "wood", "metal", "branch" });
+            leftWall.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/4_leftWall/leftWall_wood"));
+            leftWall.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/4_leftWall/leftWall_metal"));
+            leftWall.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/4_leftWall/leftWall_branch"));
+            leftWall.AddMaterialOffsetDictionary("branch", new Vector2(0, -27));
+            _buildingParts.Add(leftWall);
+            //5. frontWall
+            BuildingPart frontWall = new BuildingPart("frontWall", _cabinArea, new Vector2(218, 218), 7);
+            frontWall.SetAcceptedObjects(new string[] { "wood", "metal", "branch" });
+            frontWall.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/5_frontWall/frontWall_wood"));
+            frontWall.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/5_frontWall/frontWall_metal"));
+            frontWall.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/5_frontWall/frontWall_branch"));
+            frontWall.AddMaterialOffsetDictionary("branch", new Vector2(-26, -47));
+            _buildingParts.Add(frontWall);
+            //6. rightRoof
+            BuildingPart rightRoof = new BuildingPart("rightRoof", _cabinArea, new Vector2(192, 125), 5);
+            rightRoof.SetAcceptedObjects(new string[] { "wood", "metal", "branch", "plastic"});
+            rightRoof.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_wood"));
+            rightRoof.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_metal"));
+            rightRoof.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_branch"));
+            rightRoof.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_plastic"));
+            _buildingParts.Add(rightRoof);
+            //7. leftRoof
+            BuildingPart leftRoof = new BuildingPart("leftRoof", _cabinArea, new Vector2(59, 125), 6);
+            leftRoof.SetAcceptedObjects(new string[] { "wood", "metal", "branch", "plastic" });
+            leftRoof.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/7_leftRoof/leftRoof_wood"));
+            leftRoof.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/7_leftRoof/leftRoof_metal"));
+            leftRoof.AddMaterialDictionaryEntry("branch", Content.Load<Texture2D>("Environment/Cabin/7_leftRoof/leftRoof_branch"));
+            leftRoof.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/7_leftRoof/leftRoof_plastic"));
+            leftRoof.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
+            leftRoof.AddMaterialOffsetDictionary("branch", new Vector2(-22, 0));
+            _buildingParts.Add(leftRoof);
+            //8. leftWindow
+            BuildingPart leftWindow = new BuildingPart("leftWindow", _cabinArea, new Vector2(116, 247), 8);
+            leftWindow.SetAcceptedObjects(new string[] { "plastic", "shirt" });
+            leftWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_plastic"));
+            //leftWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));
+            //leftWindow.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
+            _buildingParts.Add(leftWindow);
+            //9. leftWindow
+            BuildingPart rightWindow = new BuildingPart("rightWindow", _cabinArea, new Vector2(345, 257), 9);
+            rightWindow.SetAcceptedObjects(new string[] { "plastic", "shirt" });
+            rightWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/rightwindow_plastic"));
+            //rightWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));
+            //rightWindow.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
+            _buildingParts.Add(rightWindow);
+            //10. door
+            BuildingPart door = new BuildingPart("door", _cabinArea, new Vector2(250, 272), 10);
+            door.SetAcceptedObjects(new string[] { "plastic", "shirt" });
+            door.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/door_plastic"));
+            //door.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));
+            //door.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
+            _buildingParts.Add(door);
+
         }
 
         public void DrawInventoryItems()

@@ -15,7 +15,9 @@ namespace Greeeeenhaus
 
         public List<string> AcceptedObjects { get; private set; } = new List<string>();
         public Dictionary<string, Texture2D> PossibleTextures;
+        public Dictionary<string, Vector2> Offsets;
         public Texture2D ChosenTexture = null;
+        public string ChosenMaterial;
         public int DrawOrder;
 
         public BuildingPart(string name, Rectangle targetArea, Vector2 placementPos, int drawOrder)
@@ -25,7 +27,9 @@ namespace Greeeeenhaus
             PlacementPos = placementPos;
             IsPlaced = false;
             PossibleTextures = new Dictionary<string, Texture2D>();
+            Offsets = new Dictionary<string, Vector2>();
             DrawOrder = drawOrder;
+            ChosenMaterial = "";
         }
 
         public void SetAcceptedObjects(string[] acceptedObjects)
@@ -38,12 +42,18 @@ namespace Greeeeenhaus
             PossibleTextures.Add(materialName, materialTexture);
         }
 
+        public void AddMaterialOffsetDictionary(string materialName, Vector2 offset)
+        {
+            Offsets.Add(materialName, offset);
+        }
+
         public bool TryBuild(FloatingObject obj) //check if dropped obj is valid and set texture
         {
             if (IsPlaced) return false;
             if (AcceptedObjects.Contains(obj.Material))
             {
                 ChosenTexture = PossibleTextures[obj.Material];
+                ChosenMaterial = obj.Material;
                 IsPlaced = true;
                 return true;
             }
@@ -52,7 +62,14 @@ namespace Greeeeenhaus
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (IsPlaced && ChosenTexture != null) spriteBatch.Draw(ChosenTexture, PlacementPos, Color.White);
+            Vector2 pos = PlacementPos;
+            if (IsPlaced && ChosenTexture != null)
+            {
+                if (Offsets.ContainsKey(ChosenMaterial)){
+                    pos += Offsets[ChosenMaterial];
+                }
+                spriteBatch.Draw(ChosenTexture, pos, Color.White);
+            }
         }
 
     }
