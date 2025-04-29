@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\floatingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:floatingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\floatingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|solutionrelative:floatingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B54914EE-8A51-472B-87E9-EFD88671FC13}|Greeeeenhaus.csproj|c:\\gemma\\gamedev\\greeeeenhaus!!\\greeeeenhaus!!\\seaanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,8 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FloatingObject.cs",
+              "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\FloatingObject.cs",
+              "RelativeDocumentMoniker": "FloatingObject.cs",
+              "ToolTip": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\FloatingObject.cs",
+              "RelativeToolTip": "FloatingObject.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:12:59.3Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -42,8 +54,7 @@
               "RelativeToolTip": "SeaAnimation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T16:34:44.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T16:34:44.684Z"
             },
             {
               "$type": "Document",
@@ -55,21 +66,7 @@
               "RelativeToolTip": "BuildingPart.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAiwEYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:13:07.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FloatingObject.cs",
-              "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\FloatingObject.cs",
-              "RelativeDocumentMoniker": "FloatingObject.cs",
-              "ToolTip": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\FloatingObject.cs",
-              "RelativeToolTip": "FloatingObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:12:59.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:13:07.777Z"
             },
             {
               "$type": "Document",
@@ -81,18 +78,17 @@
               "RelativeToolTip": "Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:44:53.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T14:44:53.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\GEMMA\\GameDev\\Greeeeenhaus!!\\Greeeeenhaus!!\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAKoBAAAAAAAAAAAowMQBAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAkwPsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T15:29:32.504Z",
               "EditorCaption": ""
