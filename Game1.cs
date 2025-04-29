@@ -17,6 +17,7 @@ namespace Greeeeenhaus
         private Texture2D _buildingBG;
         private Texture2D _playerTexture;
         private SeaAnimation _seaAnimation;
+        private Texture2D _mainMenuBG;
         //PLAYER
         private Player _player;
         //UI
@@ -27,6 +28,16 @@ namespace Greeeeenhaus
         private Texture2D _inventoryMenu;
         private Texture2D _returnButton;
         private Rectangle _returnButtonArea;
+         private Texture2D _playButton;
+        private Rectangle _playButtonArea;
+         private Texture2D _settingsButton;
+        private Rectangle _settingsButtonArea;
+        private Texture2D _miniSettingsButton;
+        private Rectangle _miniSettingsButtonArea;
+        private Texture2D _exitGameButton;
+        private Rectangle _exitGameButtonArea;
+         private Texture2D _creditsButton;
+        private Rectangle _creditsButtonArea;
         private Texture2D _discardButton;
         private Rectangle _discardButtonArea;
         private List<Vector2> _inventorySlots;
@@ -79,6 +90,7 @@ namespace Greeeeenhaus
 
             // TODO: use this.Content to load your game content here
             //Base things load
+            _mainMenuBG = Content.Load<Texture2D>("UI/MainMenuBG");
             _buildingBG = Content.Load<Texture2D>("Environment/Cabin/BuildingBG");
             _playerTexture = Content.Load<Texture2D>("Player/placeholderPlayer");
             _gameArea = new Rectangle(0, 0, GraphicsDevice.PresentationParameters.Bounds.Width, GraphicsDevice.PresentationParameters.Bounds.Height);
@@ -99,6 +111,9 @@ namespace Greeeeenhaus
             _returnButtonArea = new Rectangle(590, 45, _returnButton.Width, _returnButton.Height);
             _discardButton = Content.Load<Texture2D>("UI/placeholderDiscard");
             _discardButtonArea = new Rectangle(690, 45, _discardButton.Width, _discardButton.Height);
+            _playButton = 
+            _settingsButton = 
+            _creditsButton = 
             //define each inventory square
             _inventorySlots = new List<Vector2>();
             GenerateInventorySlots();
@@ -117,6 +132,10 @@ namespace Greeeeenhaus
 
             _storedItemCount = 0;
             _totalPickedUpObjects = 0;
+            //main menu areas
+            _playButtonArea = new Rectangle(500, 200, _playButton.Width, _playButton.Height);
+            _settingsButtonArea = new Rectangle(500, 250, _settingsButton.Width, _settingsButton.Height);
+            _creditsButtonArea = new Rectangle(500, 300, _creditsButton.Width, _creditsButton.Height);
             //Sea screen areas
             _storageArea = new Rectangle(40, 320, 80, 80);
             _goToBuildingArea = new Rectangle(40, 140, 65, 65);
@@ -232,6 +251,22 @@ namespace Greeeeenhaus
                 {
                     _player.Position.X += 40;
                     _currentState = GameState.Sea;
+                }
+            }
+            if (_currentState == GameState.MainMenu){
+                MouseState mouse = Mouse.GetState();
+                    
+                if (mouse.LeftButton == ButtonState.Pressed)
+                {
+                    if (_playButtonArea.Contains(mouse.Position)){
+                        _currentState = GameState.Sea;
+                    } 
+                    if (_settingsButtonArea.Contains(mouse.Position)){
+                        _currentState = GameState.Settings;
+                    } 
+                    if (_creditsButtonArea.Contains(mouse.Position)){
+                        _currentState = GameState.Credits;
+                    } 
                 }
             }
             base.Update(gameTime);
