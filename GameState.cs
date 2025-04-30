@@ -8,6 +8,9 @@ namespace Greeeeenhaus
     public enum GameState
     {
         Sea,
-        Building
+        Building,
+        MainMenu,
+        Settings,
+        Credits
     }
 }

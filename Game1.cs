@@ -12,7 +12,7 @@ namespace Greeeeenhaus
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         //STATES
-        private GameState _currentState = GameState.Sea;
+        private GameState _currentState;
         //BASICS
         private Texture2D _buildingBG;
         private Texture2D _playerTexture;
@@ -89,8 +89,9 @@ namespace Greeeeenhaus
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            _currentState = GameState.MainMenu;
             //Base things load
-            _mainMenuBG = Content.Load<Texture2D>("UI/MainMenuBG");
+            _mainMenuBG = Content.Load<Texture2D>("UI/MainMenu/MainMenuBackground");
             _buildingBG = Content.Load<Texture2D>("Environment/Cabin/BuildingBG");
             _playerTexture = Content.Load<Texture2D>("Player/placeholderPlayer");
             _gameArea = new Rectangle(0, 0, GraphicsDevice.PresentationParameters.Bounds.Width, GraphicsDevice.PresentationParameters.Bounds.Height);
@@ -111,9 +112,12 @@ namespace Greeeeenhaus
             _returnButtonArea = new Rectangle(590, 45, _returnButton.Width, _returnButton.Height);
             _discardButton = Content.Load<Texture2D>("UI/placeholderDiscard");
             _discardButtonArea = new Rectangle(690, 45, _discardButton.Width, _discardButton.Height);
-            _playButton = 
-            _settingsButton = 
-            _creditsButton = 
+            _playButton = Content.Load<Texture2D>("UI/MainMenu/PlayButton");
+            
+            _settingsButton = Content.Load<Texture2D>("UI/MainMenu/SettingsButton");
+            
+            _creditsButton = Content.Load<Texture2D>("UI/MainMenu/CreditsButton");
+           
             //define each inventory square
             _inventorySlots = new List<Vector2>();
             GenerateInventorySlots();
@@ -133,9 +137,9 @@ namespace Greeeeenhaus
             _storedItemCount = 0;
             _totalPickedUpObjects = 0;
             //main menu areas
-            _playButtonArea = new Rectangle(500, 200, _playButton.Width, _playButton.Height);
-            _settingsButtonArea = new Rectangle(500, 250, _settingsButton.Width, _settingsButton.Height);
-            _creditsButtonArea = new Rectangle(500, 300, _creditsButton.Width, _creditsButton.Height);
+            _playButtonArea = new Rectangle(489, 327, _playButton.Width, _playButton.Height);
+            _settingsButtonArea = new Rectangle(516, 402, _settingsButton.Width, _settingsButton.Height);
+            _creditsButtonArea = new Rectangle(490, 481, _creditsButton.Width, _creditsButton.Height);
             //Sea screen areas
             _storageArea = new Rectangle(40, 320, 80, 80);
             _goToBuildingArea = new Rectangle(40, 140, 65, 65);
@@ -348,11 +352,20 @@ namespace Greeeeenhaus
                     _spriteBatch.Draw(_selectedDragObject.Texture, new Rectangle((int)dragPos.X, (int)dragPos.Y, size, size), Color.White);
                 }
             }
-           
+            if (_currentState == GameState.MainMenu)
+            {
+                _spriteBatch.Draw(_mainMenuBG, Vector2.Zero, Color.White);
+                _spriteBatch.Draw(_playButton, _playButtonArea, Color.White);
+                _spriteBatch.Draw(_settingsButton, _settingsButtonArea, Color.White);
+                _spriteBatch.Draw(_creditsButton, _creditsButtonArea, Color.White);
+            }
             _spriteBatch.Draw(_watercolorOverlay, Vector2.Zero, Color.White * 0.11f);
             _spriteBatch.Draw(_whiteBorder, Vector2.Zero, Color.White);
-            _spriteBatch.Draw(_dialogueBox, new Vector2(0, _gameArea.Height - _dialogueBox.Height - 12), Color.White);
-            _spriteBatch.Draw(_playerFace, new Vector2(28, _gameArea.Height - _dialogueBox.Height + 32), Color.White);
+            if (_currentState == GameState.Sea || _currentState == GameState.Building)
+            {
+                _spriteBatch.Draw(_dialogueBox, new Vector2(0, _gameArea.Height - _dialogueBox.Height - 12), Color.White);
+                _spriteBatch.Draw(_playerFace, new Vector2(28, _gameArea.Height - _dialogueBox.Height + 32), Color.White);
+            }
 
             _spriteBatch.End();
 
