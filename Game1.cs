@@ -484,7 +484,7 @@ namespace Greeeeenhaus
             leftRoof.AddMaterialOffsetDictionary("branch", new Vector2(-22, 0));
             _buildingParts.Add(leftRoof);
             //8. leftWindow
-            BuildingPart leftWindow = new BuildingPart("leftWindow", _cabinArea, new Vector2(116, 247), 8);
+            BuildingPart leftWindow = new BuildingPart("leftWindow", _cabinArea, new Vector2(116, 247), 5);
             leftWindow.SetAcceptedObjects(new string[] { "plastic", "shirt" });
             leftWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_plastic"));
             //leftWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));

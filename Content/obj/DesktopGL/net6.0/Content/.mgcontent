@@ -28,8 +28,11 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/7_leftRoof/leftRoof_plastic.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/7_leftRoof/leftRoof_wood.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/door_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/door_shirt.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/leftwindow_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/leftwindow_shirt.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/rightwindow_plastic.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/8_door_windows/rightwindow_shirt.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Cabin/BuildingBG.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Branch.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Objects/Metal.png</File>
@@ -63,6 +66,9 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/WhiteEdge_overlay.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
