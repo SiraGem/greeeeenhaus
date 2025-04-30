@@ -56,18 +56,26 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Environment/Sea/Waves_2.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/placeholderHappy.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/placeholderPlayer.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/serina_left.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/Player/serina_right.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/DialogueBox.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/dialogueFont.spritefont</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/discard_button.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/exit_button.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/InventoryMenu.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/CreditsButton.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/MainMenuBackground.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/PlayButton.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/SettingsButton.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderDiscard.png</File>
-    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/placeholderReturn.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/return_button.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/Watercolor_overlay.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/WhiteEdge_overlay.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

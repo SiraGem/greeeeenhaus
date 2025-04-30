@@ -9,12 +9,15 @@ namespace Greeeeenhaus
     public class Player
     {
         public Vector2 Position;
-        public Texture2D Texture;
+        public Texture2D Left;
+        public Texture2D Right;
         public float Speed = 700f;
         public bool HasItem;
         public FloatingObject CurrentObject;
         public State CurrentState;
         public State LookingAt;
+        public Texture2D CurrentTexture;
+
         public enum State
         {
             IdleLeft,
@@ -27,9 +30,11 @@ namespace Greeeeenhaus
             MovingUp
         }
 
-        public void Load(Texture2D texture)
+        public void Load(Texture2D left, Texture2D right)
         {
-            this.Texture = texture;
+            this.Left = left;
+            this.Right = right;
+            CurrentTexture = Right;
             this.Position = new Vector2(200, 200); //starting position
             CurrentState = State.IdleDown;
         }
@@ -57,12 +62,14 @@ namespace Greeeeenhaus
                 movement.X -= 1;
                 CurrentState = State.MovingLeft;
                 LookingAt = State.IdleLeft;
+                CurrentTexture = Left;
             }
             if (kb.IsKeyDown(Keys.D) || kb.IsKeyDown(Keys.Right))
             {
                 movement.X += 1;
                 CurrentState = State.MovingRight;
                 LookingAt = State.IdleRight;
+                CurrentTexture = Right;
             }
 
             if (movement != Vector2.Zero) movement.Normalize();
@@ -77,12 +84,12 @@ namespace Greeeeenhaus
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.Texture, this.Position, Color.White);
+            spriteBatch.Draw(CurrentTexture, this.Position, Color.White);
         }
 
         public bool InsideWindowBounds(Vector2 newPosition, Rectangle gameWindowRectangle)
         {
-            Rectangle playerRectangle = new Rectangle((int)newPosition.X, (int)newPosition.Y, this.Texture.Width, this.Texture.Height);
+            Rectangle playerRectangle = new Rectangle((int)newPosition.X, (int)newPosition.Y, this.Left.Width, this.Left.Height);
 
             if (gameWindowRectangle.Contains(playerRectangle)) return true;
             else return false;
@@ -90,7 +97,7 @@ namespace Greeeeenhaus
         }
         public Rectangle GetArea() //position within game area is checked back in Game1 helped by calling this method
         {
-            return new Rectangle((int)Position.X, (int)Position.Y, Texture.Width, Texture.Height);
+            return new Rectangle((int)Position.X, (int)Position.Y, Left.Width, Left.Height);
         }
     }
 }

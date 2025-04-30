@@ -44,8 +44,8 @@ namespace Greeeeenhaus
         private const int INVENTORY_SLOT_SIZE = 71;
         //FLOATINGOBJECTS
         private const int MAX_ITEMS_SEA = 3;
-        List<FloatingObject> _currentFloatingObjects = new List<FloatingObject>();
-        Dictionary<string, Texture2D> _floatingObjectsTexMat = new Dictionary<string, Texture2D>();
+        List<FloatingObject> _currentFloatingObjects;
+        Dictionary<string, Texture2D> _floatingObjectsTexMat;
         Texture2D _foamTexture;
         private int _totalPickedUpObjects;
         //AREAS
@@ -56,12 +56,17 @@ namespace Greeeeenhaus
         private Rectangle _cabinArea;
         //STORED OBJECTS
         private const int MAX_ITEMS_STORAGE = 5;
-        List<FloatingObject> _storedItems = new List<FloatingObject>();
+        List<FloatingObject> _storedItems;
         private int _storedItemCount;
         private FloatingObject _selectedDragObject;
         //BUILDING PARTS
         private List<BuildingPart> _buildingParts;
         private int _currentBuildIndex;
+        //DIALOGUES
+        private DialogueManager _dialogueManager;
+        private SpriteFont _dialogueFont;
+        private bool _firstTimeInSea;
+        private bool _firstTimeInBuilding;
 
         Random random = new Random();
 
@@ -99,29 +104,30 @@ namespace Greeeeenhaus
             _seaAnimation = new SeaAnimation();
             _seaAnimation.Load();
             GenerateSeaParts();
-
+            _storedItems = new List<FloatingObject>();
             _player = new Player();
-            _player.Load(_playerTexture);
+            _player.Load(Content.Load<Texture2D>("Player/serina_left"), Content.Load<Texture2D>("Player/serina_right"));
             //UI Load
             _whiteBorder = Content.Load<Texture2D>("UI/WhiteEdge_overlay");
             _watercolorOverlay = Content.Load<Texture2D>("UI/Watercolor_overlay");
             _playerFace = Content.Load<Texture2D>("Player/placeholderHappy");
             _dialogueBox = Content.Load<Texture2D>("UI/DialogueBox");
             _inventoryMenu = Content.Load<Texture2D>("UI/InventoryMenu");
-            _returnButton = Content.Load<Texture2D>("UI/placeholderReturn");
-            _returnButtonArea = new Rectangle(590, 45, _returnButton.Width, _returnButton.Height);
-            _discardButton = Content.Load<Texture2D>("UI/placeholderDiscard");
-            _discardButtonArea = new Rectangle(690, 45, _discardButton.Width, _discardButton.Height);
+            _returnButton = Content.Load<Texture2D>("UI/return_button");
+            _returnButtonArea = new Rectangle(554, 51, _returnButton.Width, _returnButton.Height);
+            _discardButton = Content.Load<Texture2D>("UI/discard_button");
+            _discardButtonArea = new Rectangle(656, 49, _discardButton.Width, _discardButton.Height);
             _playButton = Content.Load<Texture2D>("UI/MainMenu/PlayButton");
-            
             _settingsButton = Content.Load<Texture2D>("UI/MainMenu/SettingsButton");
-            
             _creditsButton = Content.Load<Texture2D>("UI/MainMenu/CreditsButton");
-           
+            _exitGameButton = Content.Load<Texture2D>("UI/exit_button");
+
             //define each inventory square
+            _currentFloatingObjects = new List<FloatingObject>();
             _inventorySlots = new List<Vector2>();
             GenerateInventorySlots();
             //Define floatingObject textures
+            _floatingObjectsTexMat = new Dictionary<string, Texture2D>();
             _floatingObjectsTexMat["wood"] = Content.Load<Texture2D>("Environment/Objects/Wood");
             _floatingObjectsTexMat["shirt"] = Content.Load<Texture2D>("Environment/Objects/Shirt");
             _floatingObjectsTexMat["branch"] = Content.Load<Texture2D>("Environment/Objects/Branch");
@@ -147,7 +153,16 @@ namespace Greeeeenhaus
             _cabinArea = new Rectangle(130, 180, 260, 240);
             _buildingParts = new List<BuildingPart>();
             InitializeBuildingParts();
-            _currentBuildIndex = 6;
+            _currentBuildIndex = 0;
+            _exitGameButtonArea = new Rectangle(660, 22, _exitGameButton.Width, _exitGameButton.Height);
+
+            //Dialogues
+            _dialogueManager = new DialogueManager();
+            _dialogueFont = Content.Load<SpriteFont>("UI/dialogueFont");
+            _dialogueManager.Load(_dialogueFont, Color.MidnightBlue);
+            _firstTimeInSea = true;
+            _firstTimeInBuilding = true;
+      
         }
 
         protected override void Update(GameTime gameTime)
@@ -162,7 +177,13 @@ namespace Greeeeenhaus
                             if (mouse.LeftButton == ButtonState.Pressed)
                             {
                                 if (_playButtonArea.Contains(mouse.Position)){
+                                    _dialogueManager.ClearDialogue();
                                     _currentState = GameState.Sea;
+                                    if (_firstTimeInSea)
+                                    {
+                                        _dialogueManager.ShowDialogue("seaInstructions");
+                                        _firstTimeInSea = false;
+                                    }
                                 } 
                                 if (_settingsButtonArea.Contains(mouse.Position)){
                                     _currentState = GameState.Settings;
@@ -210,12 +231,28 @@ namespace Greeeeenhaus
 
                     if (_storedItemCount >= MAX_ITEMS_STORAGE)
                     {
+                        _dialogueManager.ClearDialogue();
                         _currentState = GameState.Building;
+                        if (_firstTimeInBuilding)
+                        {
+                            _dialogueManager.ShowDialogue("buildingInstructions");
+                            _firstTimeInBuilding = false;
+                        }
+                        else
+                        {
+                            _dialogueManager.ShowDialogue("boxFull");
+                        }
                     }
                 }
                 if (!_player.HasItem && _goToBuildingArea.Intersects(_player.GetArea()))
                 {
+                    _dialogueManager.ClearDialogue();
                     _currentState = GameState.Building;
+                    if (_firstTimeInBuilding)
+                    {
+                        _dialogueManager.ShowDialogue("buildingInstructions");
+                        _firstTimeInBuilding = false;
+                    }
                 }
                 _storedItemCount = _storedItems.Count;
             }
@@ -224,6 +261,7 @@ namespace Greeeeenhaus
                 MouseState mouse = Mouse.GetState();
                 if (_currentBuildIndex >= _buildingParts.Count && _buildingParts[_buildingParts.Count - 1].IsPlaced)
                 {
+                    _dialogueManager.ClearDialogue();
                     _currentState = GameState.EndingScene;
                 } else
                 {
@@ -264,14 +302,31 @@ namespace Greeeeenhaus
                                     //build success
                                     _storedItems.Remove(_selectedDragObject);
                                     _currentBuildIndex++;
+                                    if (_currentBuildIndex > 7)
+                                    {
+                                        if (_currentBuildIndex % 2 == 0) _dialogueManager.ShowDialogue("successBuild2");
+                                        else _dialogueManager.ShowDialogue("successBuild4");
+                                        
+                                    }
+                                    else if (_currentBuildIndex <= 7)
+                                    {
+                                        if (_currentBuildIndex % 2 == 0) _dialogueManager.ShowDialogue("successBuild1");
+                                        else _dialogueManager.ShowDialogue("successBuild3");
+                                    }
+
+                                }
+                                else
+                                {
+                                    _dialogueManager.ShowDialogue("notValid");
                                 }
                             }
                             _selectedDragObject = null;
-                        }
+                        } 
                     }
                     //CHECK IF CLICK ON RETURN BUTTON (and is not dragging object :S  )
                     if (mouse.LeftButton == ButtonState.Pressed && _returnButtonArea.Contains(mouse.Position) && _selectedDragObject == null)
                     {
+                        _dialogueManager.ClearDialogue();
                         _player.Position.X += 40;
                         _currentState = GameState.Sea;
                     }
@@ -280,7 +335,12 @@ namespace Greeeeenhaus
             }
             if (_currentState == GameState.EndingScene)
             {
-
+                _dialogueManager.ShowDialogue("cabinFinished");
+                MouseState mouse = Mouse.GetState();
+                if (mouse.LeftButton == ButtonState.Pressed && _exitGameButtonArea.Contains(mouse.Position))
+                {
+                    Reset();
+                }
             }
             base.Update(gameTime);
         }
@@ -304,6 +364,7 @@ namespace Greeeeenhaus
             {
                 _seaAnimation.Draw(_spriteBatch);
                 _player.Draw(_spriteBatch);
+                _spriteBatch.Draw(_foamTexture, _player.Position + new Vector2(12, 30), Color.White * 0.8f);
                 foreach (var obj in _currentFloatingObjects)
                 {
                     
@@ -329,8 +390,8 @@ namespace Greeeeenhaus
             {
                 _spriteBatch.Draw(_buildingBG, Vector2.Zero, Color.White);
                 _spriteBatch.Draw(_inventoryMenu, new Vector2(550, 178), Color.White);
-                _spriteBatch.Draw(_returnButton, new Vector2(590, 45), Color.White);
-                _spriteBatch.Draw(_discardButton, new Vector2(690, 45), Color.White);
+                _spriteBatch.Draw(_returnButton, _returnButtonArea, Color.White);
+                _spriteBatch.Draw(_discardButton, _discardButtonArea, Color.White);
                 //TESTING AREAS
                 /*Texture2D pixel = new Texture2D(GraphicsDevice, 1, 1);
                 pixel.SetData(new[] { Color.White });
@@ -371,13 +432,15 @@ namespace Greeeeenhaus
             {
                 _spriteBatch.Draw(_buildingBG, Vector2.Zero, Color.White);
                 DrawCabinParts();
+                _spriteBatch.Draw(_exitGameButton, _exitGameButtonArea, Color.White);
             }
             _spriteBatch.Draw(_watercolorOverlay, Vector2.Zero, Color.White * 0.11f);
             _spriteBatch.Draw(_whiteBorder, Vector2.Zero, Color.White);
-            if (_currentState == GameState.Sea || _currentState == GameState.Building)
+            if (_currentState == GameState.Sea || _currentState == GameState.Building || _currentState == GameState.EndingScene)
             {
                 _spriteBatch.Draw(_dialogueBox, new Vector2(0, _gameArea.Height - _dialogueBox.Height - 12), Color.White);
                 _spriteBatch.Draw(_playerFace, new Vector2(28, _gameArea.Height - _dialogueBox.Height + 32), Color.White);
+                _dialogueManager.Draw(_spriteBatch);
             }
 
             _spriteBatch.End();
@@ -566,5 +629,9 @@ namespace Greeeeenhaus
             _seaAnimation.AddPart(Content.Load<Texture2D>("Environment/Sea/Inventory_Box"), Vector2.Zero);
         }
     
+        public void Reset()
+        {
+            LoadContent();
+        }
     }
 }
