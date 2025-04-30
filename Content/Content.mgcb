@@ -289,7 +289,7 @@
 /processorParam:TextureFormat=Color
 /build:Environment/Cabin/7_leftRoof/leftRoof_wood.png
 
-#begin Environment/Cabin/8_door_windows/door_plastic.png
+#begin Environment/Cabin/8_door_windows_deco/decoration_shells.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -299,9 +299,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Environment/Cabin/8_door_windows/door_plastic.png
+/build:Environment/Cabin/8_door_windows_deco/decoration_shells.png
 
-#begin Environment/Cabin/8_door_windows/door_shirt.png
+#begin Environment/Cabin/8_door_windows_deco/decoration_shirt.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -311,9 +311,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Environment/Cabin/8_door_windows/door_shirt.png
+/build:Environment/Cabin/8_door_windows_deco/decoration_shirt.png
 
-#begin Environment/Cabin/8_door_windows/leftwindow_plastic.png
+#begin Environment/Cabin/8_door_windows_deco/door_plastic.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -323,9 +323,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Environment/Cabin/8_door_windows/leftwindow_plastic.png
+/build:Environment/Cabin/8_door_windows_deco/door_plastic.png
 
-#begin Environment/Cabin/8_door_windows/leftwindow_shirt.png
+#begin Environment/Cabin/8_door_windows_deco/door_shirt.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -335,9 +335,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Environment/Cabin/8_door_windows/leftwindow_shirt.png
+/build:Environment/Cabin/8_door_windows_deco/door_shirt.png
 
-#begin Environment/Cabin/8_door_windows/rightwindow_plastic.png
+#begin Environment/Cabin/8_door_windows_deco/leftwindow_plastic.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -347,9 +347,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Environment/Cabin/8_door_windows/rightwindow_plastic.png
+/build:Environment/Cabin/8_door_windows_deco/leftwindow_plastic.png
 
-#begin Environment/Cabin/8_door_windows/rightwindow_shirt.png
+#begin Environment/Cabin/8_door_windows_deco/leftwindow_shirt.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -359,7 +359,31 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Environment/Cabin/8_door_windows/rightwindow_shirt.png
+/build:Environment/Cabin/8_door_windows_deco/leftwindow_shirt.png
+
+#begin Environment/Cabin/8_door_windows_deco/rightwindow_plastic.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Environment/Cabin/8_door_windows_deco/rightwindow_plastic.png
+
+#begin Environment/Cabin/8_door_windows_deco/rightwindow_shirt.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Environment/Cabin/8_door_windows_deco/rightwindow_shirt.png
 
 #begin Environment/Cabin/BuildingBG.png
 /importer:TextureImporter

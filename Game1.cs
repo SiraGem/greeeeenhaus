@@ -123,7 +123,7 @@ namespace Greeeeenhaus
             GenerateInventorySlots();
             //Define floatingObject textures
             _floatingObjectsTexMat["wood"] = Content.Load<Texture2D>("Environment/Objects/Wood");
-            _floatingObjectsTexMat["fabric"] = Content.Load<Texture2D>("Environment/Objects/Shirt");
+            _floatingObjectsTexMat["shirt"] = Content.Load<Texture2D>("Environment/Objects/Shirt");
             _floatingObjectsTexMat["branch"] = Content.Load<Texture2D>("Environment/Objects/Branch");
             _floatingObjectsTexMat["metal"] = Content.Load<Texture2D>("Environment/Objects/Metal");
             _floatingObjectsTexMat["plastic"] = Content.Load<Texture2D>("Environment/Objects/Plastic");
@@ -147,7 +147,7 @@ namespace Greeeeenhaus
             _cabinArea = new Rectangle(130, 180, 260, 240);
             _buildingParts = new List<BuildingPart>();
             InitializeBuildingParts();
-            _currentBuildIndex = 0;
+            _currentBuildIndex = 6;
         }
 
         protected override void Update(GameTime gameTime)
@@ -156,7 +156,22 @@ namespace Greeeeenhaus
                 Exit();
 
             // TODO: Add your update logic here
-
+            if (_currentState == GameState.MainMenu){
+                            MouseState mouse = Mouse.GetState();
+                    
+                            if (mouse.LeftButton == ButtonState.Pressed)
+                            {
+                                if (_playButtonArea.Contains(mouse.Position)){
+                                    _currentState = GameState.Sea;
+                                } 
+                                if (_settingsButtonArea.Contains(mouse.Position)){
+                                    _currentState = GameState.Settings;
+                                } 
+                                if (_creditsButtonArea.Contains(mouse.Position)){
+                                    _currentState = GameState.Credits;
+                                } 
+                            }
+                        }
             if (_currentState == GameState.Sea)
             {
                 _player.Update(gameTime, _playableSeaArea);
@@ -207,71 +222,65 @@ namespace Greeeeenhaus
             if (_currentState == GameState.Building)
             {
                 MouseState mouse = Mouse.GetState();
-                
-                //Mouse is clicking and check if its one of the slots
-                if (mouse.LeftButton == ButtonState.Pressed)
+                if (_currentBuildIndex >= _buildingParts.Count && _buildingParts[_buildingParts.Count - 1].IsPlaced)
                 {
-                    for (int i = 0; i < _storedItems.Count && _selectedDragObject == null; i++)
-                    {
-                        Rectangle slot = new Rectangle((int)_inventorySlots[i].X,
-                                                       (int)_inventorySlots[i].Y,
-                                                       INVENTORY_SLOT_SIZE, 
-                                                       INVENTORY_SLOT_SIZE);
-                        if (slot.Contains(mouse.Position))
-                        {
-                            _selectedDragObject = _storedItems[i];
-                        }
-                    }
-                }
-                //is dragging an objet and releases, what to do whether on cabin area or outside..
-                if (_selectedDragObject != null && mouse.LeftButton == ButtonState.Released)
+                    _currentState = GameState.EndingScene;
+                } else
                 {
-                    if (!_cabinArea.Contains(mouse.Position) && !_discardButtonArea.Contains(mouse.Position))
+                    //Mouse is clicking and check if its one of the slots
+                    if (mouse.LeftButton == ButtonState.Pressed)
                     {
-                        _selectedDragObject = null;
-                    }
-                    if (_discardButtonArea.Contains(mouse.Position)) //dragged to discard area
-                    {
-                        _storedItems.Remove(_selectedDragObject);
-                        _selectedDragObject = null;
-                    }
-                    if (_cabinArea.Contains(mouse.Position) && _currentBuildIndex < _buildingParts.Count)//mouse released, with object and ON cabin area...
-                    {
-                        BuildingPart currentPart = _buildingParts[_currentBuildIndex];
-                        if (!currentPart.IsPlaced)
+                        for (int i = 0; i < _storedItems.Count && _selectedDragObject == null; i++)
                         {
-                            if (currentPart.TryBuild(_selectedDragObject))
+                            Rectangle slot = new Rectangle((int)_inventorySlots[i].X,
+                                                           (int)_inventorySlots[i].Y,
+                                                           INVENTORY_SLOT_SIZE,
+                                                           INVENTORY_SLOT_SIZE);
+                            if (slot.Contains(mouse.Position))
                             {
-                                //build success
-                                _storedItems.Remove(_selectedDragObject);
-                                _currentBuildIndex++;
+                                _selectedDragObject = _storedItems[i];
                             }
                         }
-                        _selectedDragObject = null;
+                    }
+                    //is dragging an objet and releases, what to do whether on cabin area or outside..
+                    if (_selectedDragObject != null && mouse.LeftButton == ButtonState.Released)
+                    {
+                        if (!_cabinArea.Contains(mouse.Position) && !_discardButtonArea.Contains(mouse.Position))
+                        {
+                            _selectedDragObject = null;
+                        }
+                        if (_discardButtonArea.Contains(mouse.Position)) //dragged to discard area
+                        {
+                            _storedItems.Remove(_selectedDragObject);
+                            _selectedDragObject = null;
+                        }
+                        if (_cabinArea.Contains(mouse.Position) && _currentBuildIndex < _buildingParts.Count)//mouse released, with object and ON cabin area...
+                        {
+                            BuildingPart currentPart = _buildingParts[_currentBuildIndex];
+                            if (!currentPart.IsPlaced)
+                            {
+                                if (currentPart.TryBuild(_selectedDragObject))
+                                {
+                                    //build success
+                                    _storedItems.Remove(_selectedDragObject);
+                                    _currentBuildIndex++;
+                                }
+                            }
+                            _selectedDragObject = null;
+                        }
+                    }
+                    //CHECK IF CLICK ON RETURN BUTTON (and is not dragging object :S  )
+                    if (mouse.LeftButton == ButtonState.Pressed && _returnButtonArea.Contains(mouse.Position) && _selectedDragObject == null)
+                    {
+                        _player.Position.X += 40;
+                        _currentState = GameState.Sea;
                     }
                 }
-                //CHECK IF CLICK ON RETURN BUTTON (and is not dragging object :S  )
-                if (mouse.LeftButton == ButtonState.Pressed && _returnButtonArea.Contains(mouse.Position) && _selectedDragObject == null)
-                {
-                    _player.Position.X += 40;
-                    _currentState = GameState.Sea;
-                }
+                
             }
-            if (_currentState == GameState.MainMenu){
-                MouseState mouse = Mouse.GetState();
-                    
-                if (mouse.LeftButton == ButtonState.Pressed)
-                {
-                    if (_playButtonArea.Contains(mouse.Position)){
-                        _currentState = GameState.Sea;
-                    } 
-                    if (_settingsButtonArea.Contains(mouse.Position)){
-                        _currentState = GameState.Settings;
-                    } 
-                    if (_creditsButtonArea.Contains(mouse.Position)){
-                        _currentState = GameState.Credits;
-                    } 
-                }
+            if (_currentState == GameState.EndingScene)
+            {
+
             }
             base.Update(gameTime);
         }
@@ -284,7 +293,13 @@ namespace Greeeeenhaus
             // TODO: Add your drawing code here
 
             _spriteBatch.Begin();
-           
+           if (_currentState == GameState.MainMenu)
+            {
+                _spriteBatch.Draw(_mainMenuBG, Vector2.Zero, Color.White);
+                _spriteBatch.Draw(_playButton, _playButtonArea, Color.White);
+                _spriteBatch.Draw(_settingsButton, _settingsButtonArea, Color.White);
+                _spriteBatch.Draw(_creditsButton, _creditsButtonArea, Color.White);
+            }
             if (_currentState == GameState.Sea)
             {
                 _seaAnimation.Draw(_spriteBatch);
@@ -352,12 +367,10 @@ namespace Greeeeenhaus
                     _spriteBatch.Draw(_selectedDragObject.Texture, new Rectangle((int)dragPos.X, (int)dragPos.Y, size, size), Color.White);
                 }
             }
-            if (_currentState == GameState.MainMenu)
+            if (_currentState == GameState.EndingScene)
             {
-                _spriteBatch.Draw(_mainMenuBG, Vector2.Zero, Color.White);
-                _spriteBatch.Draw(_playButton, _playButtonArea, Color.White);
-                _spriteBatch.Draw(_settingsButton, _settingsButtonArea, Color.White);
-                _spriteBatch.Draw(_creditsButton, _creditsButtonArea, Color.White);
+                _spriteBatch.Draw(_buildingBG, Vector2.Zero, Color.White);
+                DrawCabinParts();
             }
             _spriteBatch.Draw(_watercolorOverlay, Vector2.Zero, Color.White * 0.11f);
             _spriteBatch.Draw(_whiteBorder, Vector2.Zero, Color.White);
@@ -458,7 +471,7 @@ namespace Greeeeenhaus
             leftWall.AddMaterialOffsetDictionary("branch", new Vector2(0, -27));
             _buildingParts.Add(leftWall);
             //5. frontWall
-            BuildingPart frontWall = new BuildingPart("frontWall", _cabinArea, new Vector2(218, 218), 7);
+            BuildingPart frontWall = new BuildingPart("frontWall", _cabinArea, new Vector2(218, 218), 8);
             frontWall.SetAcceptedObjects(new string[] { "wood", "metal", "branch" });
             frontWall.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/5_frontWall/frontWall_wood"));
             frontWall.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/5_frontWall/frontWall_metal"));
@@ -466,7 +479,7 @@ namespace Greeeeenhaus
             frontWall.AddMaterialOffsetDictionary("branch", new Vector2(-26, -47));
             _buildingParts.Add(frontWall);
             //6. rightRoof
-            BuildingPart rightRoof = new BuildingPart("rightRoof", _cabinArea, new Vector2(192, 125), 5);
+            BuildingPart rightRoof = new BuildingPart("rightRoof", _cabinArea, new Vector2(192, 125), 6);
             rightRoof.SetAcceptedObjects(new string[] { "wood", "metal", "branch", "plastic"});
             rightRoof.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_wood"));
             rightRoof.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_metal"));
@@ -474,7 +487,7 @@ namespace Greeeeenhaus
             rightRoof.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/6_rightRoof/rightRoof_plastic"));
             _buildingParts.Add(rightRoof);
             //7. leftRoof
-            BuildingPart leftRoof = new BuildingPart("leftRoof", _cabinArea, new Vector2(59, 125), 6);
+            BuildingPart leftRoof = new BuildingPart("leftRoof", _cabinArea, new Vector2(59, 125), 7);
             leftRoof.SetAcceptedObjects(new string[] { "wood", "metal", "branch", "plastic" });
             leftRoof.AddMaterialDictionaryEntry("wood", Content.Load<Texture2D>("Environment/Cabin/7_leftRoof/leftRoof_wood"));
             leftRoof.AddMaterialDictionaryEntry("metal", Content.Load<Texture2D>("Environment/Cabin/7_leftRoof/leftRoof_metal"));
@@ -486,24 +499,31 @@ namespace Greeeeenhaus
             //8. leftWindow
             BuildingPart leftWindow = new BuildingPart("leftWindow", _cabinArea, new Vector2(116, 247), 5);
             leftWindow.SetAcceptedObjects(new string[] { "plastic", "shirt" });
-            leftWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_plastic"));
-            //leftWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));
+            leftWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/leftwindow_plastic"));
+            leftWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/leftwindow_shirt"));
             //leftWindow.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
             _buildingParts.Add(leftWindow);
-            //9. leftWindow
+            //9. rightWindow
             BuildingPart rightWindow = new BuildingPart("rightWindow", _cabinArea, new Vector2(345, 257), 9);
             rightWindow.SetAcceptedObjects(new string[] { "plastic", "shirt" });
-            rightWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/rightwindow_plastic"));
-            //rightWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));
+            rightWindow.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/rightwindow_plastic"));
+            rightWindow.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/rightwindow_shirt"));
             //rightWindow.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
             _buildingParts.Add(rightWindow);
             //10. door
             BuildingPart door = new BuildingPart("door", _cabinArea, new Vector2(250, 272), 10);
             door.SetAcceptedObjects(new string[] { "plastic", "shirt" });
-            door.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/door_plastic"));
-            //door.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows/leftwindow_platic"));
+            door.AddMaterialDictionaryEntry("plastic", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/door_plastic"));
+            door.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/door_shirt"));
             //door.AddMaterialOffsetDictionary("plastic", new Vector2(10, 0));
             _buildingParts.Add(door);
+            //11. deco
+            BuildingPart deco = new BuildingPart("deco", _cabinArea, new Vector2(89, 243), 11);
+            deco.SetAcceptedObjects(new string[] { "shells", "shirt" });
+            deco.AddMaterialDictionaryEntry("shells", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/decoration_shells"));
+            deco.AddMaterialDictionaryEntry("shirt", Content.Load<Texture2D>("Environment/Cabin/8_door_windows_deco/decoration_shirt"));
+            deco.AddMaterialOffsetDictionary("shirt", new Vector2(-60, -54));
+            _buildingParts.Add(deco);
 
         }
 

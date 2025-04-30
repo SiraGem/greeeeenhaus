@@ -11,6 +11,7 @@ namespace Greeeeenhaus
         Building,
         MainMenu,
         Settings,
-        Credits
+        Credits,
+        EndingScene
     }
 }
