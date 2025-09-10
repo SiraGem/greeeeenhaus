@@ -63,15 +63,19 @@
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/discard_button.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/exit_button.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/InventoryMenu.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/Credits.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/CreditsButton.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/MainMenuBackground.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/PlayButton.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/MainMenu/SettingsButton.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/return_button.png</File>
+    <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/SerinaIcon.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/Watercolor_overlay.png</File>
     <File>C:/GEMMA/GameDev/Greeeeenhaus!!/Greeeeenhaus!!/Content/UI/WhiteEdge_overlay.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

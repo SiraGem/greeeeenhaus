@@ -716,6 +716,18 @@
 /processorParam:TextureFormat=Color
 /build:UI/InventoryMenu.png
 
+#begin UI/MainMenu/Credits.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:UI/MainMenu/Credits.png
+
 #begin UI/MainMenu/CreditsButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -775,6 +787,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:UI/return_button.png
+
+#begin UI/SerinaIcon.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:UI/SerinaIcon.png
 
 #begin UI/Watercolor_overlay.png
 /importer:TextureImporter

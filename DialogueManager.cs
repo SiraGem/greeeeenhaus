@@ -35,15 +35,15 @@ namespace Greeeeenhaus
         public void InitializeDialogueDictionary()
         {
             _dialoguesDictionary["notValid"] = "I don't think I can use that here...";
-            _dialoguesDictionary["seaInstructions"] = "Let's pick up all this stuff and put it on that box!";
-            _dialoguesDictionary["buildingInstructions"] = "We have some materials now, so drag and drop anything on this empty area.";
+            _dialoguesDictionary["seaInstructions"] = "Let's pick up all this stuff and put it \nin that box!";
+            _dialoguesDictionary["buildingInstructions"] = "We have some materials now, so drag \nand drop anything on this empty area.";
             _dialoguesDictionary["successBuild1"] = "Nice, that worked!";
             _dialoguesDictionary["successBuild2"] = "This is looking great.";
             _dialoguesDictionary["successBuild3"] = "Yeah, that can go there.";
             _dialoguesDictionary["successBuild4"] = "Let's keep going, it's almost done.";
-            _dialoguesDictionary["boxFull"] = "Oh, the box is full. Let's use these materials.";
+            _dialoguesDictionary["boxFull"] = "Oh, the box is full. \nLet's use these materials.";
 
-            _dialoguesDictionary["cabinFinished"] = "Wow, I did it... Now I truly am ready to start this new chapter in my life <3";
+            _dialoguesDictionary["cabinFinished"] = "Wow, I did it...?? Now I truly am ready\nto start this new chapter in my life...";
         }
 
         public void Draw(SpriteBatch spriteBatch)
